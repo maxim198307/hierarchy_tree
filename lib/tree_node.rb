@@ -87,7 +87,7 @@ module TreeNode
   def calculate_depth(current_node, arr)
     return 0 if current_node.last.nil?
 
-    arr.find { |node| node[:name] == current_node.last }[:depth].to_i + 1
+    arr.find { |node| node[:name] == current_node.last }[:depth] + 1
   end
 
   module_function :draw_hierarchy,
