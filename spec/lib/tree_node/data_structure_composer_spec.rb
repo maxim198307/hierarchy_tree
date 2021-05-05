@@ -1,8 +1,8 @@
-require 'tree_node.rb'
+require 'tree_node/data_structure_composer.rb'
 
-describe TreeNode do
-  describe '.compose_data_structure' do
-    subject { described_class.compose_data_structure(input) }
+describe TreeNode::DataStructureComposer do
+  describe '.call' do
+    subject { described_class.call(input) }
 
     context 'when input data does not contain trailing children' do
       let(:input) {  [['A', nil], ['B', 'A'], ['C', 'B'], ['D', 'C']] }
